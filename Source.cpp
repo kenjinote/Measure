@@ -1,3 +1,5 @@
+#pragma comment(linker,"\"/manifestdependency:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
+
 #ifndef UNICODE
 #define UNICODE
 #endif
@@ -5,9 +7,9 @@
 #define _WIN32_WINNT 0x0500
 #define PI 3.1415926535897932386
 
-#include<windows.h>
-#include<math.h>
-#include<stdio.h>
+#include <windows.h>
+#include <math.h>
+#include <stdio.h>
 
 TCHAR szClassName[] = TEXT("Window");
 
@@ -166,5 +168,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst,
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
 	}
-	return msg.wParam;
+	return (int)msg.wParam;
 }
